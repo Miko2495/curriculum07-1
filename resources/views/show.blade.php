@@ -18,6 +18,8 @@
                 <h3></h3>
                 <p>{{ $post->body }}</p>
             </div>
+            <div class="updated_at">{{$post->updated_at}}
+            </div>
         </div>
         <div class="footer">
             <a href="/">back</a>

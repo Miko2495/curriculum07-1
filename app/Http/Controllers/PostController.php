@@ -21,5 +21,10 @@ public function create()
 {
     return view('create');
 }
-
+public function store(Request $request, Post $post)
+{
+    $input = $request['post'];
+    $post->fill($input)->save();
+    return redirect('/posts/' . $post->id);
+}
 }

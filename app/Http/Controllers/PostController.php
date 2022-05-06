@@ -27,4 +27,6 @@ public function store(Request $request, Post $post)
     $post->fill($input)->save();
     return redirect('/posts/' . $post->id);
 }
+
 }
+

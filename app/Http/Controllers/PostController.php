@@ -33,7 +33,8 @@ public function edit(Post $post)
 }
 public function delete(Post $post)
 {
-    return redirect('/posts/');
+    $post->delete();
+    return redirect('/');
 }
 public function update(Post $post,PostRequest $request)
 {

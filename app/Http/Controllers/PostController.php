@@ -31,6 +31,10 @@ public function edit(Post $post)
 {
     return view('edit')->with(['post'=>$post]);
 }
+public function delete(Post $post)
+{
+    return redirect('/posts/');
+}
 public function update(Post $post,PostRequest $request)
 {
     $input = $request['post'];
@@ -38,4 +42,6 @@ public function update(Post $post,PostRequest $request)
     return redirect('/posts/' . $post->id);
 }
 }
+
+
 

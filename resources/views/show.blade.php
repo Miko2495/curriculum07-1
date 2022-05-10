@@ -23,7 +23,7 @@
         <div class="footer">
             <a href="/">back</a>
         </div>
-    <form action="/posts/{{ $post->id }}" id="form_delete{{ $post->id }}" method="post">
+    <form action="/posts/{{ $post->id }}" id="form_delete" method="post">
             @csrf
             @method('DELETE')
     <input type="button" style="display:none">
@@ -32,10 +32,10 @@
  <p class="edit">[<a href="/posts/{{$post->id}}/edit">edit</a>]</p>
 <script>
 function deletePost(e){
-'use strict';
-if (confirm('削除すると復元できません。\本当に削除しますか?'))
-{document.getElementById('form_delete').submit();
-}
+    'use strict';
+    if (confirm('削除すると復元できません。\n本当に削除しますか?')){
+    document.getElementById('form_delete').submit();
+    }
 }
 </script>
     </body>
